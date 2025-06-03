@@ -100,7 +100,6 @@ namespace ContosoUniversity.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ID,FirstMidName,LastName,EnrollmentDate")] Student student)
         {
-
             _context.Add(student);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));

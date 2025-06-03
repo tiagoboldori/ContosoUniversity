@@ -9,7 +9,6 @@ namespace ContosoUniversity.Data
     {
         public static void Initialize(SchoolContext context)
         {
-            context.Database.EnsureCreated();
             context.Database.Migrate();
 
             // Look for any students.
